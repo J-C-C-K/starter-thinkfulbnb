@@ -1,7 +1,8 @@
 /* -------  General Styles ------- */
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
+  display: grid;
 }
 
 h2 {
@@ -26,12 +27,12 @@ section {
 }
 
 section.alternate-background {
-  background-color: #00a699;
+  background-color: #00A699;
   color: #fff;
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -53,15 +54,28 @@ main img {
 /* -------  Navigation ------- */
 
 header {
-  background-color: #ff385c;
+  background-color: #FF385C;
   padding: 20px 20px 0 20px;
   text-align: center;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 60px;
   color: #fff;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  font: sans-serif;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
 }
 
 header nav ul li {
@@ -81,7 +95,7 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
-  border: 2px solid #ff385c;
+  border: 2px solid #FF385C;
   padding: 10px;
 }
 
@@ -89,14 +103,18 @@ form label {
   font-weight: bold;
 }
 
-form select,
-form input {
+form div {
+  display: flex;
+  justify-content: space-between;
+}
+
+form select, form input {
   margin-bottom: 20px;
-  width: 180px;
+  width: 200px;
 }
 
 form button {
-  background-color: #ff385c;
+  background-color: #FF385C;
   border: none;
   color: #fff;
   font-size: 24px;
@@ -107,7 +125,7 @@ form button {
 /* -------  Footer ------- */
 
 footer {
-  background-color: #ff385c;
+  background-color: #FF385C;
 }
 
 footer p {
@@ -117,3 +135,63 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 480px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+  
+  body {
+  font-family: "Lato", sans-serif;
+  display: grid;
+}
+
+
+  .logo {
+    margin: 14px 0 14px 20px;
+    padding-top: 0;
+    font-size: 42px;
+  }
+
+  header nav ul {
+    align-items: center;
+  }
+
+  .group {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  form div {
+    flex-direction: column;
+  }
+
+  form button {
+    flex: 1;
+  }
+
+  form select, form input {
+    margin-bottom: 0px;
+  }
+  /*iPhone portrait*/
+@media only screen and (min-width: 320px) {
+body {
+    border: 3px solid purple;
+}
+}
+
+/*large desktop*/
+@media only screen and (min-width: 1600px) {
+body {
+    border: 3px solid yellow;
+  }
+}
+}
