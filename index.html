@@ -1,110 +1,197 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Vacation Rentals & Unique Homes</title>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pangolin&family=Lato&display=swap"
-      rel="stylesheet"
-    />
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
+/* -------  General Styles ------- */
 
-  <body>
-    <header>
-      <div class="logo">Thinkfulbnb</div>
-      <nav>
-        <ul id="menu">
-          <li><a>Stay</a></li>
-          <li><a>About</a></li>
-          <li><a>Ideas</a></li>
-          <li><a>Host</a></li>
-        </ul>
-      </nav>
-    </header>
+body {
+  font-family: 'Lato', sans-serif;
+  display: grid;
+}
 
-    <main>
-      <!-- Stay -->
-      <section id="stay">
-        <h2>Find the perfect vacation rental</h2>
-        <!-- Create a form here -->
-      </section>
+h2 {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0 10px 10px 10px;
+  text-align: center;
+}
 
-      <!-- About -->
-      <section id="about" class="alternate-background">
-        <h2>About</h2>
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
 
-        <img
-          src="images/vacation-rental-pool.png"
-          alt="Thinkfulbnb - Vacation rental pool"
-        />
+p {
+  line-height: 1.5em;
+  margin: 0;
+}
 
-        <img
-          src="images/vacation-rental-inside-stone.png"
-          alt="Thinkfulbnb - Vacation rental inside stone"
-        />
+section {
+  padding: 20px;
+}
 
-        <p>
-          Fusce porta odio nunc, eget pretium massa rutrum sit amet. Etiam
-          fringilla aliquam dapibus. Maecenas quis nisi sed turpis aliquam
-          porttitor eget ut quam. Sed vel scelerisque ex. Duis in pharetra
-          neque, at tempus lorem. Aenean mi magna, posuere at quam sed, euismod
-          gravida neque.
-        </p>
-      </section>
+section.alternate-background {
+  background-color: #00A699;
+  color: #fff;
+}
 
-      <!-- Ideas -->
-      <section id="ideas">
-        <h2>Ideas</h2>
-        <h3>Forest retreats</h3>
-        <img
-          src="images/forest-retreat.png"
-          alt="Thinkfulbnb - Forest retreat"
-        />
-        <h3>Beaches</h3>
-        <img src="images/beach-house.png" alt="Thinkfulbnb - Beach house" />
+main img {
+  width: 100%;
+}
 
-        <h3>Rustic cabins</h3>
-        <img src="images/cabin.png" alt="Thinkfulbnb - Cabin" />
+/* ---  Groups & Items --- */
 
-        <h3>Pet-friendly</h3>
-        <img src="images/pet-friendly.png" alt="Thinkfulbnb - Pet-friendly" />
-      </section>
+.group {
+  display: flex;
+  flex-direction: column;
+}
 
-      <!-- Host -->
-      <section id="host" class="alternate-background">
-        <h2>Want to Become a Thinkfulbnb Host?</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-          molestie in est id efficitur. Sed hendrerit ut turpis quis dapibus.
-          Nam sit amet iaculis lectus. Aliquam erat volutpat. Praesent rhoncus
-          pellentesque eros in aliquet. Sed accumsan elit lacus, id ultrices
-          libero rutrum vitae.
-        </p>
-        <ul>
-          <li>Mauris in pellentesque ligula.</li>
-          <li>Sed accumsan elit lacus, id ultrices libero rutrum vitae.</li>
-          <li>Nunc vitae ex eget neque pellentesque porttitor.</li>
-          <li>Cras mollis lorem sagittis sapien imperdiet blandit. Vivamus.</li>
-          <li>
-            Donec vehicula ipsum nisi, eu consectetur leo feugiat et. Fusce eget
-            hendrerit mauris.
-          </li>
-        </ul>
+.item {
+  flex: 1;
+  margin: 10px;
+}
 
-        <img src="images/become-a-host.png" alt="Thinkfulbnb - Become a host" />
-      </section>
-    </main>
+.item-double {
+  flex: 2;
+}
 
-    <footer>
-      <p>© Thinkful</p>
-    </footer>
-  </body>
-</html>
+/* -------  Navigation ------- */
+
+header {
+  background-color: #FF385C;
+  padding: 20px 20px 0 20px;
+  text-align: center;
+}
+
+.logo {
+  font-family: "Pangolin", cursive;
+  font-size: 60px;
+  color: #fff;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  font: sans-serif;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 20px 0 0;
+}
+
+header nav ul li a:hover {
+  color: #bdbdbd;
+  text-decoration: none;
+}
+
+/* -------  Search Form ------- */
+form {
+  border: 2px solid #FF385C;
+  padding: 10px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+}
+
+form select, form input {
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+form button {
+  background-color: #FF385C;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  padding: 15px;
+  width: 100%;
+}
+
+/* -------  Footer ------- */
+
+footer {
+  background-color: #FF385C;
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* -------  Media Query ------- */
+
+@media all and (min-width: 480px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+  
+  body {
+  font-family: "Lato", sans-serif;
+  display: grid;
+}
+
+
+  .logo {
+    margin: 14px 0 14px 20px;
+    padding-top: 0;
+    font-size: 42px;
+  }
+
+  header nav ul {
+    align-items: center;
+  }
+
+  .group {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  form div {
+    flex-direction: column;
+  }
+
+  form button {
+    flex: 1;
+  }
+
+  form select, form input {
+    margin-bottom: 0px;
+  }
+  /*iPhone portrait*/
+@media only screen and (min-width: 320px) {
+body {
+    border: 3px solid purple;
+}
+}
+
+/*large desktop*/
+@media only screen and (min-width: 1600px) {
+body {
+    border: 3px solid yellow;
+  }
+}
+}
