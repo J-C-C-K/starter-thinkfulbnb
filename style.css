@@ -188,34 +188,6 @@ body {
   }
 }
 
-/*iPhone landscape*/
-@media only screen and (min-width: 480px) {
-  body {
-      border: 3px solid green;
-  }
-}
-
-/*Android landscape*/
-@media only screen and (min-width: 640px) {
-  body {
-      border: 3px solid pink;
-  }
-}
-
-/*iPad potrait*/
-@media only screen and (min-width: 768px) {
-  body {
-      border: 3px solid red;
-  }
-}
-
-/*iPad lanscape / small laptop*/
-@media only screen and (min-width: 1024px) {
-  body {
-      border: 3px solid blue;
-  }
-}
-
 /*large desktop*/
 @media only screen and (min-width: 1600px) {
   body {
